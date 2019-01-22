@@ -1,0 +1,31 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "东部华侨城大峡谷",
+    "bannerImg": "http://localhost:8080/images/d01.jpg",
+    "galleryImgs": ["http://localhost:8080/images/d01.jpg", "http://localhost:8080/images/d02.jpg",
+      "http://localhost:8080/images/d03.jpg", "http://localhost:8080/images/d04.jpg",
+      "http://localhost:8080/images/d05.jpg", "http://localhost:8080/images/d06.jpg",
+      "http://localhost:8080/images/d07.jpg", "http://localhost:8080/images/d08.jpg",
+      "http://localhost:8080/images/d09.jpg", "http://localhost:8080/images/d10.jpg",
+      "http://localhost:8080/images/d11.jpg", "http://localhost:8080/images/d12.jpg",
+      "http://localhost:8080/images/d13.jpg", "http://localhost:8080/images/d14.jpg",
+      "http://localhost:8080/images/d15.jpg"],
+    "categoryList": [{
+      "title": "门票",
+      "children": [{
+        "title": "成人票",
+        "children": [{
+          "title": "温泉门票"
+        }]
+      },{
+        "title": "亲子票"
+      }]
+    },{
+      "title": "一日游",
+      "children": [{
+        "title": "深圳出发"
+      }]
+    }]
+  }
+}
