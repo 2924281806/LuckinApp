@@ -2,7 +2,6 @@
     <div class="detail">
       <detail-banner :sightName="sightName" :bannerImg="bannerImg" :galleryImgs="galleryImgs"></detail-banner>
       <detail-header></detail-header>
-      <detail-sort></detail-sort>
       <detail-list :list="categoryList"></detail-list>
 
     </div>
@@ -12,23 +11,23 @@
   import DetailHeader from './child/Header.vue'
   import DetailBanner from './child/Banner.vue'
   import DetailList from './child/List.vue'
-  import DetailSort from './child/Sort.vue'
 
   import axios from 'axios'
+  import Bscroll from 'better-scroll'
     export default {
         name: 'Detail',
         components:{
           'detail-header':DetailHeader,
           'detail-banner':DetailBanner,
-          'detail-list':DetailList,
-          'detail-sort':DetailSort
+          'detail-list':DetailList
         },
         data(){
           return{
             sightName: '',
             bannerImg: '',
             galleryImgs: [],
-            categoryList: []
+            categoryList: [],
+            titles:[]
           }
         },
         methods:{
@@ -49,7 +48,6 @@
               this.categoryList = data.categoryList
             }
           }
-
         },
         mounted(){
           this.getDetailInfo()
@@ -61,5 +59,5 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
 .detail
-  height 50rem
+  height 10rem
 </style>
