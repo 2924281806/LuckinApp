@@ -1,8 +1,8 @@
 <template>
     <div class="swiper">
-      <swiper :options="swiperOption">
+      <swiper :options="swiperOption" v-if="showSwiper">
         <!-- slides -->
-        <swiper-slide v-for="item in swiperList" :key="item.id">
+        <swiper-slide v-for="item of list" :key="item.id">
           <img class="swiper-img" :src="item.imgUrl" alt="">
         </swiper-slide>
 
@@ -34,38 +34,21 @@
               autoplay:1000,
               speed:200,
               loop:true
-
-            },
-            swiperList:[
-              {
-                id:'0001',
-                imgUrl:'http://localhost:8080/images/s02.jpg'
-              },
-              {
-                id:'0002',
-                imgUrl:'http://localhost:8080/images/s01.jpg'
-              },
-              {
-                id:'0003',
-                imgUrl:'http://localhost:8080/images/s03.jpg'
-              },
-              {
-                id:'0004',
-                imgUrl:'http://localhost:8080/images/s04.jpg'
-              },
-              {
-                id:'0005',
-                imgUrl:'http://localhost:8080/images/s05.jpg'
-              }
-            ]
             }
           }
+        },
+        props:{
+          list:Array
+        },
+        computed:{
+          showSwiper(){
+            return this.list.length
+          }
+        }
     }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  .swiper >>> .swiper-button-next
-    background-size 20px 20px
   .swiper >>> .swiper-pagination-bullet-active
     background #ffffff
   .swiper
