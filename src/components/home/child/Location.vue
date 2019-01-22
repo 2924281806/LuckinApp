@@ -1,9 +1,11 @@
 <template>
     <div class="location">
-      <div class="location-left">
-        <span class="iconfont">&#xe63f;</span>
-        深圳
-      </div>
+      <router-link  to="/city">
+        <div class="location-left">
+          <span class="iconfont">&#xe63f;</span>
+          {{this.city}}
+        </div>
+      </router-link>
       <div class="location-right">
         <span class="iconfont">&#xe602;</span>
         必游榜单
@@ -12,8 +14,12 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
-        name: 'HomeLocation'
+        name: 'HomeLocation',
+        computed:{
+          ...mapState(['city'])
+        }
     }
 </script>
 
@@ -25,6 +31,7 @@
     float left
     width 50%
     padding-bottom: 10%
+    color black
     text-align center
     box-sizing border-box
     padding .23rem
