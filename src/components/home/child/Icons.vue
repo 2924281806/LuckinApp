@@ -23,67 +23,17 @@
           return {
             swiperOption:{
               pagination:'.swiper-pagination',
-              autoplay:0
-            },
-            iconList:[
-              {
-                id:'0001',
-                imgUrl:'http://localhost:8080/images/i01.png',
-                desc:'景点门票'
-              },
-              {
-                id:'0002',
-                imgUrl:'http://localhost:8080/images/i02.png',
-                desc:'深圳必游'
-              },
-              {
-                id:'0003',
-                imgUrl:'http://localhost:8080/images/i03.png',
-                desc:'游乐场'
-              },
-              {
-                id:'0004',
-                imgUrl:'http://localhost:8080/images/i04.png',
-                desc:'海洋馆'
-              },
-              {
-                id:'0005',
-                imgUrl:'http://localhost:8080/images/i05.png',
-                desc:'动植物园'
-              },
-              {
-                id:'0006',
-                imgUrl:'http://localhost:8080/images/i06.png',
-                desc:'泡温泉'
-              },
-              {
-                id:'0007',
-                imgUrl:'http://localhost:8080/images/i07.gif',
-                desc:'年终大促'
-              },
-              {
-                id:'0008',
-                imgUrl:'http://localhost:8080/images/i08.png',
-                desc:'一日游'
-              },
-              {
-                id:'0009',
-                imgUrl:'http://localhost:8080/images/i09.png',
-                desc:'东部华侨城'
-              }
-              ,
-              {
-                id:'0010',
-                imgUrl:'http://localhost:8080/images/i10.png',
-                desc:'溜娃儿'
-              }
-            ]
+              autoplay:false
+            }
           }
+        },
+        props:{
+          list:Array
         },
         computed:{
           pages () {
             const pages = []
-            this.iconList.forEach((item,index) => {
+            this.list.forEach((item,index) => {
               const page = Math.floor(index/8)
               if(!pages[page]){
                 pages[page] = []
