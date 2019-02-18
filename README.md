@@ -19,4 +19,5 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-![](https://github.com/2924281806/vue-music/blob/master/src/assets/logo.png)
+![]
+(https://github.com/2924281806/vue-music/blob/master/src/assets/logo.png)
